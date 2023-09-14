@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <title>Visual Recognition System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="text-center" >Image Classifier</h1>
+
+    <form class="hero" action='/', method="post" enctype="multipart/form-data">
+        <label for="input-file" id="drop-area">
+            <input type="file" accept="image/*" id="input-file" >
+            <div id="img-view">
+                <img src="508-icon.png">
+                <p>Drag and Drop or click here to upload image</p>
+            </div>
+            <input class="btn btn-primary mt-3"type="submit" value="Predict Image" >
+        </label>
+        
+    </form>
+    <script src="script.js"></script>
+    {% if prediction %}
+        <p class="text-center"> Image is a {{prediction}}</p>
+    {% endif %}
+</body>
+</html>
